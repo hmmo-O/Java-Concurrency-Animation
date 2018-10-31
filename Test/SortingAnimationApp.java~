@@ -1,0 +1,27 @@
+import javax.swing.JFrame;
+import java.awt.GridLayout;
+
+public class SortingAnimationApp extends JFrame
+{
+  private SortPanel leftPanel;
+  private SortPanel rightPanel;
+  public SortingAnimationApp() 
+  {
+    super("Sorting Animation");
+    setLayout(new GridLayout(1, 2));
+    
+    leftPanel = new SortPanel();
+    rightPanel = new SortPanel();
+    
+    add(leftPanel);
+    add(rightPanel);
+  }
+  public static void main(String[] args)
+  {
+    SortingAnimationApp sortingApp = new SortingAnimationApp();
+    sortingApp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    sortingApp.setSize(800, 500);
+    sortingApp.setVisible(true);
+  }
+}
+    
